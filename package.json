@@ -1,0 +1,32 @@
+{
+  "name": "calviche",
+  "description": "Executes command for all local dependencies respecting the hierarchical dependency order.",
+  "author": "Walter Devia <wdevia@sosafe.cl>",
+  "version": "1.0.0",
+  "repository": "https://github.com/sosafeapp/calviche",
+  "keywords": [
+    "node",
+    "install",
+    "command",
+    "local",
+    "dependencies",
+    "monorepo"
+  ],
+  "license": "MIT",
+  "bin": {
+    "calviche": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "del-cli \"dist/**\" && tsc -p ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.157",
+    "@types/node": "^14.0.14",
+    "del-cli": "^3.0.1",
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "tree-model": "^1.0.7"
+  }
+}

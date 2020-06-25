@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "preserveConstEnums": true,
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "allowJs": false,
+    "target": "es5",
+    "moduleResolution": "node",
+    "lib": [
+      "es2015"
+    ],
+    "outDir": "dist",
+    "rootDir": "src",
+    "module": "commonjs"
+  },
+  "include": [
+    "./src/**/*.ts"
+  ]
+}
+
