@@ -5,7 +5,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var lodash_1 = __importDefault(require("lodash"));
 var path_1 = __importDefault(require("path"));
 var child_process_1 = require("child_process");
 var tree_model_1 = __importDefault(require("tree-model"));
@@ -35,7 +34,7 @@ function buildDependenciesTree(packageNode) {
 function getLocalDependencies(packageJson, dependenciesType) {
     var localDependencies = {};
     for (var dependencyName in packageJson[dependenciesType]) {
-        if (lodash_1.default.has(packageJson, dependenciesType + "." + dependencyName) &&
+        if (packageJson && packageJson[dependenciesType] && packageJson[dependenciesType][dependencyName] &&
             packageJson[dependenciesType][dependencyName].includes('file:')) {
             localDependencies[dependencyName] =
                 packageJson[dependenciesType][dependencyName];

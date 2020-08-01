@@ -2,7 +2,7 @@
   "name": "calviche",
   "description": "Executes command for all local dependencies respecting the hierarchical dependency order.",
   "author": "Walter Devia <wdevia@sosafe.cl>",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": "https://github.com/sosafeapp/calviche",
   "keywords": [
     "node",
@@ -26,7 +26,6 @@
     "typescript": "^3.9.5"
   },
   "dependencies": {
-    "lodash": "^4.17.15",
     "tree-model": "^1.0.7"
   }
 }

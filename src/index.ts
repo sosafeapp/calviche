@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 /* eslint-disable @typescript-eslint/no-var-requires */
 
-import _ from 'lodash';
 import path from 'path';
 import { execSync as execCommand } from 'child_process';
 import TreeModel from 'tree-model';
@@ -55,7 +54,7 @@ function getLocalDependencies(
 
   for (const dependencyName in packageJson[dependenciesType]) {
     if (
-      _.has(packageJson, `${dependenciesType}.${dependencyName}`) &&
+      packageJson && packageJson[dependenciesType] && packageJson[dependenciesType][dependencyName] &&
       packageJson[dependenciesType][dependencyName].includes('file:')
     ) {
       localDependencies[dependencyName] =
