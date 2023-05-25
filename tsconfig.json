@@ -7,10 +7,10 @@
     "declarationMap": true,
     "sourceMap": true,
     "allowJs": false,
-    "target": "es5",
+    "target": "ES2020",
     "moduleResolution": "node",
     "lib": [
-      "es2015"
+      "ES2020"
     ],
     "outDir": "dist",
     "rootDir": "src",
